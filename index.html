@@ -191,6 +191,7 @@
                 <li class="nav-item"><a class="nav-link" href="#" id="product-nav">Items</a></li>
                 <li class="nav-item"><a class="nav-link" href="#" id="customer-nav">Customers</a></li>
                 <li class="nav-item"><a class="nav-link" href="#" id="order-nav">Orders</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" id="history-nav">Orders History</a></li>
                 <li class="nav-item"><a class="nav-link" href="#" id="about-nav">About</a></li>
             </ul>
         </div>
@@ -199,7 +200,7 @@
 
 <section id="home-content" class="text-center py-5">
     <div class="container">
-        <h1 class="fw-bold">Welcome to <span style="color: #ff6b6b;">Flowers</span></h1>
+        <h1 class="fw-bold">Welcome to <span style="color: #ff6b6b;"> Elegant Blooms </span></h1>
         <p class="lead text-muted">A blooming platform to manage flowers, customers, and orders in a beautiful way.</p>
         <button id="buy-now" class="btn btn-custom btn-lg mt-3">Start Exploring</button>
     </div>
@@ -272,7 +273,7 @@
 <section id="customer-content" style="display: none;">
     <div class="container">
         <div class="text-center mb-5">
-            <h2 class="fw-bold">Customer Garden</h2>
+            <h2 class="fw-bold">Customer Details</h2>
             <p class="text-muted">Keep track of your flower-loving customers.</p>
         </div>
         <div class="row g-4">
@@ -284,7 +285,7 @@
                     <div class="card-body">
                         <form class="row g-3">
                             <div class="col-md-6">
-                                <input type="text" class="form-control" placeholder="Customer Id" id="cusId" readonly>
+                                <input type="text" class="form-control" placeholder="Customer Id" id="cusId" >
                             </div>
                             <div class="col-md-6">
                                 <input type="text" class="form-control" placeholder="Customer Name" id="cusName">
@@ -340,62 +341,62 @@
         </div>
         <div class="row">
             <div class="col-lg-4 col-md-12">
-                <div class="card input p-3 border-primary border-3 " style="border-radius:20px; background-color: rgba(11,34,49,0.27)">
+                <div class="card input p-3 border-primary border-3 " style="border-radius:20px; background-color: #ccb0d8; )">
                     <div class="card-body">
                         <h5 class="card-title text-center text-primary">Order Details</h5>
                         <br>
                         <form>
                             <div class="mb-3">
-                                <label for="orderId" class="form-label" style="color: wheat">Order Id</label>
+
                                 <input type="text" class="form-control border border-primary border border-2" id="orderId" placeholder="Order Id">
                             </div>
                             <div class="mb-3">
-                                <label for="orderDate" class="form-label" style="color: wheat">Order Date</label>
+
                                 <input type="date" class="form-control border border-primary border border-2" id="orderDate" placeholder="Order Date">
                             </div>
                             <div class="mb-3">
-                                <label for="cmbCustomerId" class="form-label" style="color: wheat">Customer Ids</label>
+
                                 <select id="cmbCustomerId" class="form-select border border-primary border border-2"></select>
                             </div>
                             <div class="mb-3">
-                                <label for="custFName" class="form-label" style="color: wheat">Customer First Name</label>
+
                                 <input type="text" class="form-control border border-primary border border-2" id="custFName" placeholder="customer first Name">
                             </div>
                             <div class="mb-3">
-                                <label for="custLname" class="form-label" style="color: wheat">Customer Last Name</label>
+
                                 <input type="text" class="form-control border border-primary border border-2" id="custLname" placeholder="customer last Name">
                             </div>
                             <div class="mb-3">
-                                <label for="custAddress" class="form-label" style="color: wheat">Customer Address</label>
+
                                 <input type="text" class="form-control border border-primary border border-2" id="custAddress" placeholder="Customer Address">
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-12 mt-7">
-                <div class="card input p-3 border-primary border border-3 " style="border-radius:20px; background-color: rgba(11,34,49,0.27); height: 648px">
+            <div class="col-lg-4 col-md-12 mt-7" >
+                <div class="card input p-3 border-primary border border-3 " style="border-radius:20px; background-color: #ccb0d8; ">
                     <h5 class="card-title text-center text-primary">Item Details</h5>
                     <br>
                     <form>
                         <div class="mb-3">
-                            <label for="cmbItemCode" class="form-label" style="color: wheat">Item Ids</label>
+
                             <select id="cmbItemCode" class="form-select"></select>
                         </div>
                         <div class="mb-3">
-                            <label for="orderItemName" class="form-label" style="color: wheat">Item Names</label>
+
                             <input type="text" class="form-control" id="orderItemName" placeholder="Item Name">
                         </div>
                         <div class="mb-3">
-                            <label for="orderItemPrice" class="form-label" style="color: wheat">Item Price</label>
+
                             <input type="text" class="form-control" id="orderItemPrice" placeholder="Item Price">
                         </div>
                         <div class="mb-3">
-                            <label for="orderItemQty" class="form-label" style="color: wheat">Item Quantity</label>
+
                             <input type="text" class="form-control" id="orderItemQty" placeholder="Item Quantity">
                         </div>
                         <div class="mb-3">
-                            <label for="ordersQty" class="form-label" style="color: wheat">Orders Quantity</label>
+
                             <input type="text" class="form-control" id="ordersQty" placeholder="Order Quantity">
                         </div>
                     </form>
@@ -403,8 +404,8 @@
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-12 mt-7">
-                <div class="card input p-3 bill border-primary border border-3 " style="border-radius:20px; background-color: rgba(11,34,49,0.27);height: 648px" )>
+            <div class="col-lg-4 col-md-12 mt-7" >
+                <div class="card input p-3 bill border-primary border border-3 " style="border-radius:20px; background-color: #ccb0d8; )>
                     <h5 class="card-title text-center  text-primary" >Order Slip</h5>
                     <br>
                     <form>
@@ -464,6 +465,40 @@
     </div>
 </section>
 
+
+<section id="sales-content">
+    <div class="container mt-5">
+        <div class="mb-4 text-center">
+            <h2 class="fw-bold text-primary">Sales Overview</h2>
+            <p class="text-muted mb-0">Track your earnings and sales data below</p>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12 d-flex justify-content-center">
+                <div class="card p-4 shadow-lg w-100 rounded">
+                    <h5 class="mb-3 text-dark">Sales Table</h5>
+                    <div class="table-responsive">
+                        <table class="table table-hover table-bordered mb-0">
+                            <thead class="bg-light">
+                            <tr>
+                                <th scope="col" style="width: 16.66%;">Order ID</th>
+                                <th scope="col" style="width: 16.66%;">Customer ID</th>
+                                <th scope="col" style="width: 16.66%;">Date</th>
+                                <th scope="col" style="width: 16.66%;">Total Amount</th>
+                            </tr>
+                            </thead>
+                            <tbody id="sales-tbody">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+        </div>
+    </div>
+</section>
+
 <section id="about-content" class="py-5" style="display: none;">
     <div class="container">
         <div class="text-center mb-4">
@@ -488,11 +523,12 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script type="module" src="controller/itemController.js"></script>
 <script type="module" src="controller/customerContrller.js"></script>
+<script type="module" src="controller/orderController.js"></script>
 
 <script>
     $(document).ready(function () {
         function hideAllSections() {
-            $("#home-content, #product-content, #customer-content, #orders-content, #about-content").hide();
+            $("#home-content, #product-content, #customer-content, #orders-content, #sales-content, #about-content").hide();
         }
 
         hideAllSections();
@@ -503,6 +539,7 @@
         $("#customer-nav").click(function() { hideAllSections(); $("#customer-content").show(); });
         $("#order-nav").click(function() { hideAllSections(); $("#orders-content").show(); });
         $("#about-nav").click(function() { hideAllSections(); $("#about-content").show(); });
+        $("#history-nav").click(function() { hideAllSections(); $("#sales-content").show(); });
         $("#buy-now").click(function() { hideAllSections(); $("#product-content").show(); });
     });
 </script>
