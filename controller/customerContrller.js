@@ -27,6 +27,7 @@ $("#customer-save").click(function () {
     });
     clearCustomer();
     loadCustomers();
+    loadCustomerIds()
 });
 
 export function loadCustomers() {
@@ -120,4 +121,23 @@ function nextCustomerId() {
     if (customer_db.length === 0) return 2001;
     let lastId = Number(customer_db[customer_db.length - 1].custId);
     return lastId + 1;
+}
+
+
+
+function loadCustomerIds() {
+    $('#cmbCustomerId').empty();
+    $('#cmbCustomerId').append($('<option>', {
+        value: '',
+        text: 'Select Customer ID'
+    }));
+    console.log(customer_db);
+    customer_db.forEach(customer => {
+        $('#cmbCustomerId').append(
+            $('<option>', {
+                value: customer.custId,
+                text: customer.custId
+            })
+        );
+    });
 }
