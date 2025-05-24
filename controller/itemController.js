@@ -1,5 +1,5 @@
 import { item_db } from "../db/db.js";
-import productModel from "../model/productModel.js";
+import itemModel from "../model/itemModel.js";
 
 $(document).ready(function () {
     clear();
@@ -19,7 +19,7 @@ $("#item-save").click(function () {
         return;
     }
 
-    let item_data = new productModel(itemId, itemName, qty, color, price);
+    let item_data = new itemModel(itemId, itemName, qty, color, price);
     item_db.push(item_data);
     console.log(item_db);
     Swal.fire({
@@ -28,6 +28,7 @@ $("#item-save").click(function () {
     });
     clear();
     loadItems();
+    loadItemsId();
 });
 
 export function loadItems() {
@@ -105,7 +106,7 @@ $('#item-update').click(function () {
 
     let index = item_db.findIndex(item => item.itemId == itemId);
     if (index !== -1) {
-        item_db[index] = new productModel(itemId, itemName, qty, color, price);
+        item_db[index] = new itemModel(itemId, itemName, qty, color, price);
         Swal.fire({
             title: "Updated Successfully!",
             icon: "success"
@@ -121,4 +122,20 @@ function nextId() {
     if (item_db.length === 0) return 1001;
     let lastItem = Number(item_db[item_db.length - 1].itemId);
     return lastItem + 1;
+}
+
+export function loadItemsId() {
+    $('#cmbItemCode').empty();
+    $('#cmbItemCode').append($('<option>', {
+        value: '',
+        text: 'Select item ID'
+    }));
+    item_db.forEach(item => {
+        $('#cmbItemCode').append(
+            $('<option>', {
+                value: item.itemId,
+                text: item.itemId
+            })
+        );
+    });
 }
